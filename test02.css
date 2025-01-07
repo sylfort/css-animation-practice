@@ -1,0 +1,96 @@
+@charset "UTF-8";
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+ /* 徐々に変化なし */
+.p00{
+	margin: 10px;
+	width: 200px;
+	height: 50px;
+	background-color: #ff0000;
+}
+
+.p00:hover{
+	width: 800px; /* ２００ｐｘ　ー＞　８００ｐｘにする */
+}
+
+ /* 1秒かけて幅を変化させる */
+.p01{
+	margin: 10px;
+	width: 200px;
+	height: 50px;
+	background-color: #ff0000;
+}
+
+.p01:hover{
+	transition-property: width; /* 変化させるのは width */
+	width: 800px;
+	transition-duration: 1s; /* 発動してから終わるまで */
+}
+
+.p02{
+	margin: 10px;
+	width: 200px;
+	height: 50px;
+	background-color: #ff0000;
+}
+
+.p02:hover{
+	transition-property: width;
+	width: 800px;
+	transition-duration: 1s;
+	transition-timing-function: ease-out; /* アニメーションの変化のタイミング */
+}
+
+ /* 発動するまでの時間変える */
+.p03{
+	margin: 10px;
+	width: 200px;
+	height: 50px;
+	background-color: #ff0000;
+}
+
+.p03:hover{
+	transition-property: width;
+	width: 800px;
+	transition-duration: 1s;
+	transition-timing-function: ease-out;
+	transition-delay: 1s; /* 発動するまでの遅延時間 */
+}
+
+ /* 色も変化する */
+.p04{
+	margin: 10px;
+	width: 200px;
+	height: 50px;
+	background-color: #ff0000;
+}
+
+.p04:hover{
+	transition-property: width, background-color; /* 幅だけでなく、色の変化も追加 */
+	width: 800px;
+	background-color: #ffcccc;	 /* 赤　ー＞　ピンク */
+	transition-duration: 1s;
+	transition-timing-function: ease-out;
+}
+
+/* もちろん減らすこともできる */
+.p05{
+	margin: 10px;
+	width: 200px;
+	height: 50px;
+	background-color: #ff0000;
+}
+
+.p05:hover{
+	transition-property: width, background-color;
+	width: 140px; /* 幅は当然減らすこともできます */
+	background-color: #ffcccc;
+	transition-duration: 1s;
+	transition-timing-function: ease-out;
+}
+
+/* https://www.htmq.com/css3/index.shtml#tran */
